@@ -36,4 +36,34 @@ public class RowTransposition {
 
         return encryptedText.toString();
     }
+
+    public static String decrypt(String encryptedText, String keywordCols, String keywordRows) {
+        int keywordColsLength = keywordCols.length();
+        int keywordRowsLength = (int)Math.ceil((double)encryptedText.length() / keywordColsLength); 
+
+        char[][] matrix = new char[keywordRowsLength][keywordColsLength];
+
+        char[] keywordRowsArray = keywordRows.toCharArray();
+        Arrays.sort(keywordRowsArray);
+        String sortedKeywordRows = new String(keywordRowsArray);
+
+        int index = 0;
+        for (int i = 0; i < sortedKeywordRows.length(); i++) {
+            int row = keywordRows.indexOf(sortedKeywordRows.charAt(i));
+            for (int j = 0; j < keywordColsLength; j++) {
+                matrix[row][j] = encryptedText.charAt(index);
+                index++;
+            }
+        }
+
+        StringBuilder decryptedText = new StringBuilder();
+
+        for (int i = 0; i < keywordRowsLength; i++) {
+            for (int j = 0; j < keywordColsLength; j++) {
+                decryptedText.append(matrix[i][j]);
+            }
+        }
+
+        return decryptedText.toString();
+    }
 }
