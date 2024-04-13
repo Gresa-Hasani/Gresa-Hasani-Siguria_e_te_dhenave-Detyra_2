@@ -6,23 +6,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // Merr plaintext nga useri
         System.out.print("Shkruaj plaintext-in: ");
-        String plaintext = input.nextLine().toLowerCase().replaceAll("\\s+", ""); // Hiq hapësirat dhe shndërro në lowercase
+        String plaintext = input.nextLine().toLowerCase().replaceAll("\\s+", ""); 
 
-        // Merr keywordCols nga useri
         System.out.print("Shkruaj keywordCols-in: ");
         String keywordCols = input.nextLine().toLowerCase();
 
-        // Përcakto gjatësinë e keywordRows
         int keywordRowsLength = (int)Math.ceil((double)plaintext.length() / keywordCols.length());
         System.out.println("Gjatësia e pritshme e keywordRows është: " + keywordRowsLength);
 
-        // Merr keywordRows nga useri
         System.out.print("Shkruaj keywordRows-in: ");
         String keywordRows = input.nextLine().toLowerCase();
 
-        // Enkripto plaintext-in
         String encryptedText1 = RowTransposition.encrypt(plaintext,keywordCols,keywordRows);
         System.out.println("Teksti i enkriptuar me Row Transposition: " + encryptedText1);
 
