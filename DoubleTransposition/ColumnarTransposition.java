@@ -38,8 +38,8 @@ public class ColumnarTransposition {
 
         return ciphertext.toString();
     }
-}
-
+    
+ // Dencryption function
 public static String decrypt(String cipherText, String keywordCols) {
         String decryptedText = "";
         int gjatesiaKeyword = keywordCols.length();
@@ -47,7 +47,7 @@ public static String decrypt(String cipherText, String keywordCols) {
         int rreshtat = (int) Math.ceil((double) gjatesiaCipherText / gjatesiaKeyword);
         char[][] matrica = new char[rreshtat][gjatesiaKeyword];
 
-        // Sort the key and store the sorted indices
+        
         char[] sortedKeyword = keywordCols.toCharArray();
         Arrays.sort(sortedKeyword);
         int[] sortedIndexes = new int[gjatesiaKeyword];
@@ -55,7 +55,7 @@ public static String decrypt(String cipherText, String keywordCols) {
             sortedIndexes[i] = keywordCols.indexOf(sortedKeyword[i]);
         }
 
-        // Populate the grid with ciphertext using sorted key order
+        
         int index = 0;
         for (int j = 0; j < gjatesiaKeyword; j++) {
             int column = sortedIndexes[j];
@@ -68,13 +68,14 @@ public static String decrypt(String cipherText, String keywordCols) {
             }
         }
 
-        // Create the plaintext from the grid
+        
         for (int i = 0; i < rreshtat; i++) {
             for (int j = 0; j < gjatesiaKeyword; j++) {
                 decryptedText += matrica[i][j];
             }
         }
 
-        // Remove trailing spaces from the plaintext
+      
         return decryptedText.replaceAll("\\s+$", "");
     }
+}
