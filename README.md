@@ -1,1 +1,1 @@
-# Gresa-Hasani-Siguria_e_te_dhenave-Detyra_2
+Siguria_e_te_dhenave-Detyra_2
