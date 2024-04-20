@@ -18,7 +18,7 @@ Ky projekt është zhvilluat me gjuhën Java duke përdorur IntelliJ IDEA Commun
 
 ## Përshkrimi i algoritmeve të implementuara
 1.	**Key Running Cipher**
-1.1	**Algoritmi i enkriptimit:**
+- 1.1	**Algoritmi i enkriptimit:**
     •	Merr si hyrje një plaintext dhe një çelës.
     •	Përdor karakteret e çelësit për të përcaktuar sa zhvendoset çdo karakter në plaintext.
     •	Për çdo karakter në plaintext:
@@ -26,7 +26,7 @@ Ky projekt është zhvilluat me gjuhën Java duke përdorur IntelliJ IDEA Commun
         o	E shton këtë karakter të enkriptuar në tekstin e enkriptuar.
     •	Kthehet teksti i enkriptuar.
 
-1.2	**Algoritmi i dekriptimit:**
+- 1.2	**Algoritmi i dekriptimit:**
     •	Merr si hyrje tekstin e enkriptuar dhe çelësin.
     •	Përdor procesin e kundërt të shifrimit për të kthyer karakteret në pozicionet e tyre origjinale.
     •	Për çdo karakter në tekstin e enkriptuar:
