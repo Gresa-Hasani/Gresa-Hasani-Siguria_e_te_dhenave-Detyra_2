@@ -19,20 +19,20 @@ Ky projekt është zhvilluat me gjuhën Java duke përdorur IntelliJ IDEA Commun
 ## Përshkrimi i algoritmeve të implementuara
 1.	**Key Running Cipher**
 - 1.1	**Algoritmi i enkriptimit:**
-    •	Merr si hyrje një plaintext dhe një çelës.
-    •	Përdor karakteret e çelësit për të përcaktuar sa zhvendoset çdo karakter në plaintext.
-    •	Për çdo karakter në plaintext:
-        o	Nëse karakteri është një shkronjë, atëherë e zhvendos bazuar në vlerën ASCII të tij dhe vlerën ASCII të karakterit të çelësit.
-        o	E shton këtë karakter të enkriptuar në tekstin e enkriptuar.
-    •	Kthehet teksti i enkriptuar.
+    --	Merr si hyrje një plaintext dhe një çelës.
+    --	Përdor karakteret e çelësit për të përcaktuar sa zhvendoset çdo karakter në plaintext.
+    --	Për çdo karakter në plaintext:
+        --- Nëse karakteri është një shkronjë, atëherë e zhvendos bazuar në vlerën ASCII të tij dhe vlerën ASCII të karakterit të çelësit.
+        --- E shton këtë karakter të enkriptuar në tekstin e enkriptuar.
+    --	Kthehet teksti i enkriptuar.
 
 - 1.2	**Algoritmi i dekriptimit:**
-    •	Merr si hyrje tekstin e enkriptuar dhe çelësin.
-    •	Përdor procesin e kundërt të shifrimit për të kthyer karakteret në pozicionet e tyre origjinale.
-    •	Për çdo karakter në tekstin e enkriptuar:
-        o	Nëse karakteri është një shkronjë, përdor çelësin për të llogaritur zhvendosjen e nevojshme për të kthyer karakterin në pozicionin e tij origjinal në alfabetin ASCII.
-        o	E shton këtë karakter të dekriptuar në tekstin e dekriptuar.
-    •	Kthehet teksti i dekriptuar.
+    --	Merr si hyrje tekstin e enkriptuar dhe çelësin.
+    --	Përdor procesin e kundërt të shifrimit për të kthyer karakteret në pozicionet e tyre origjinale.
+    --	Për çdo karakter në tekstin e enkriptuar:
+        ---	Nëse karakteri është një shkronjë, përdor çelësin për të llogaritur zhvendosjen e nevojshme për të kthyer karakterin në pozicionin e tij origjinal në alfabetin ASCII.
+        ---	E shton këtë karakter të dekriptuar në tekstin e dekriptuar.
+    --	Kthehet teksti i dekriptuar.
     
 Këto dy algoritme janë të ndara në dy klasa të veçanta, **Encryption** dhe **Decryption**. Klasa kryesore **Main** përdoret për të marrë hyrjet nga përdoruesi, për të thirrur metodat për e enkriptimit dhe dekriptimit, dhe për të printuar tekstin e enkriptuar dhe tekstin e dekriptuar në konsolë.
 
