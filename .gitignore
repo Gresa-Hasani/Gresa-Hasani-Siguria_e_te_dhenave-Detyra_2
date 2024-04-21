@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.iws
+
+# Compiled Java bytecode
+/target/
+*/target/
+
+# Eclipse
+*.project
+*.settings/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Mac OS
+.DS_Store
+
+# Temporary files
+*.log
+*.tmp
