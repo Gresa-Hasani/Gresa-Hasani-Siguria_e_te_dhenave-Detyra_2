@@ -6,7 +6,7 @@
 
 # Gjuha
 
-Ky projekt është zhvilluat me gjuhën Java duke përdorur IntelliJ IDEA Community.
+Ky projekt është zhvilluar me gjuhën Java duke përdorur IntelliJ IDEA Community.
 
 ## Si të ekzekutohet programi
 
