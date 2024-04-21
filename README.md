@@ -24,11 +24,11 @@ Ky projekt është zhvilluat me gjuhën Java duke përdorur IntelliJ IDEA Commun
     
 Këto dy algoritme janë të ndara në dy klasa të veçanta, **Encryption** dhe **Decryption**. Klasa kryesore **Main** përdoret për të marrë hyrjet nga përdoruesi, për të thirrur metodat për e enkriptimit dhe dekriptimit, dhe për të printuar tekstin e enkriptuar dhe tekstin e dekriptuar në konsolë.
 
-2.	**Double Transposition**
+### 2.	**Double Transposition**
 - **Row Transposition**
 - **Algoritmi i enkriptimit:** Kjo metodë fillimisht ndan plaintext-in në rreshta sipas një çelësi të dhënë (keywordCols) dhe pastaj i rreshton rreshtat sipas një çelësi tjetër të dhënë (keywordRows). Kjo siguron që teksti të shpërndahet në mënyrë të panjohur, përveçse për ata që njohin rendin e rreshtave dhe kolonave. Pas shpërndarjes së tekstit në matricën e përshtatur, karakteret zgjidhen sipas rendit të dhënë nga keywordRows dhe bashkohen në një tekst të enkriptuar.
 - **Algoritmi i dekriptimit:** Ky algoritëm bën operacionin e kundërt të algoritmit të enkriptimit. Fillimisht, karakteret e tekstit të enkriptuar ndahen në rreshta sipas rendit të dhënë nga keywordRows, pastaj rreshtat rreshtat renditen sipas rendit origjinal të keywordRows dhe karakteret i bashkohen për të krijuar tekstin e dekriptuar.
-
+###
 - **Column Transposition**
 - **Algoritmi i enkriptimit:** Ky algoritëm fillimisht ndan plaintext-in në kolona sipas një çelësi të dhënë, i cili quhet keywordCols. Pas ndarjes së tekstit në kolona, karakteret e secilës kolonë zgjidhen dhe bashkohen në një radhë të caktuar nga keywordCols. Rezultati është teksti i enkriptuar.
 - **Algoritmi i dekriptimit:** Ky algoritëm kryen operacionin e kundërt të algoritmit të enkriptimit. Fillimisht, karakteret e tekstit të enkriptuar ndahen në kolona sipas rendit origjinal të keywordCols. Pastaj, kolonat e ndara renditen në përputhje me rendin origjinal të keywordCols. Karakteret e kolonave të renditura pastaj bashkohen për të krijuar tekstin e dekriptuar.
@@ -37,8 +37,16 @@ Këto dy algoritme janë të ndara në dy klasa të veçanta, **Encryption** dhe
 
 ## Shembuj të ekzekutimit
 1. **Key Running Cipher**
+   
    ![image](https://github.com/Gresa-Hasani/Siguria_e_te_dhenave-Detyra_2/assets/153296296/99e4fec3-d1a1-47e9-aea4-64d9f5ab83e1)
 
 2. **Double Transposition**
+   
    ![image](https://github.com/Gresa-Hasani/Siguria_e_te_dhenave-Detyra_2/assets/153296296/607bfae7-9fa2-4050-8ce0-ba6ca2bc2484)
 
+# Punuan
+
+#### - Gresa Halili
+#### - Gresa Hasani
+#### - Gzon Alaj
+#### - Haki Pintolli
