@@ -37,11 +37,11 @@ Këto dy algoritme janë të ndara në dy klasa të veçanta, **Encryption** dhe
 Fillimisht merr hyrjen nga përdoruesi për plaintext dhe keywordCols. Pas kësaj, kërkon gjatësinë e keywordRows duke llogaritur përafërsisht sa rreshta do të duhen për të ndarë plaintext-in në mënyrë të përshtatshme në matricë. E enkripton plaintext-in duke përdorur Row Transposition. Tekstin e enkriptuar me RowTransposition e enkripton me Column Transposition dhe të dyja transpozicionet i paraqet në konsolë. Më pas tekstin e enkriptuar me Column Transposition e dekripton me po të njëjtin transposition. Përfundimisht, tekstin e dekriptuar me Column Transposition e dekripton me Row Transposition dhe të dyja transpozicionet i paraqet në konsolë.
 
 ## Shembuj të ekzekutimit
-1. **Key Running Cipher**
-   
-   ![image](https://github.com/Gresa-Hasani/Siguria_e_te_dhenave-Detyra_2/assets/153296296/99e4fec3-d1a1-47e9-aea4-64d9f5ab83e1)
+### 1. **Key Running Cipher**
 
-2. **Double Transposition**
+   ![image](https://github.com/Gresa-Hasani/Siguria_e_te_dhenave-Detyra_2/assets/153296296/ef3a2f78-9bf0-4ab6-aee2-cd977a50d61f)
+
+### 2. **Double Transposition**
    
    ![image](https://github.com/Gresa-Hasani/Siguria_e_te_dhenave-Detyra_2/assets/153296296/607bfae7-9fa2-4050-8ce0-ba6ca2bc2484)
 
