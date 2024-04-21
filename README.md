@@ -18,53 +18,20 @@ Ky projekt është zhvilluat me gjuhën Java duke përdorur IntelliJ IDEA Commun
 
 ## Përshkrimi i algoritmeve të implementuara
 1.	**Key Running Cipher**
-- 1.1	**Algoritmi i enkriptimit:**
-    --	Merr si hyrje një plaintext dhe një çelës.
-    --	Përdor karakteret e çelësit për të përcaktuar sa zhvendoset çdo karakter në plaintext.
-    --	Për çdo karakter në plaintext:
-        --- Nëse karakteri është një shkronjë, atëherë e zhvendos bazuar në vlerën ASCII të tij dhe vlerën ASCII të karakterit të çelësit.
-        --- E shton këtë karakter të enkriptuar në tekstin e enkriptuar.
-    --	Kthehet teksti i enkriptuar.
+- 1.1	**Algoritmi i enkriptimit:** Algoritmi i enkriptimit fillimisht përdor një plaintext dhe një çelës. Për çdo karakter në plaintext, ai zhvendos karakterin bazuar në vlerën ASCII të tij dhe vlerën ASCII të karakterit të çelësit. Nëse karakteri është një shkronjë, atëherë ai zhvendos bazuar në ASCII të karakterit në alfabet dhe shton këtë karakter të enkriptuar në tekstin e enkriptuar. Në fund, kthen tekstin e enkriptuar.
 
-- 1.2	**Algoritmi i dekriptimit:**
-    --	Merr si hyrje tekstin e enkriptuar dhe çelësin.
-    --	Përdor procesin e kundërt të shifrimit për të kthyer karakteret në pozicionet e tyre origjinale.
-    --	Për çdo karakter në tekstin e enkriptuar:
-        ---	Nëse karakteri është një shkronjë, përdor çelësin për të llogaritur zhvendosjen e nevojshme për të kthyer karakterin në pozicionin e tij origjinal në alfabetin ASCII.
-        ---	E shton këtë karakter të dekriptuar në tekstin e dekriptuar.
-    --	Kthehet teksti i dekriptuar.
+- 1.2	**Algoritmi i dekriptimit:** Algoritmi i dekriptimit merr si hyrje tekstin e enkriptuar dhe çelësin. Përdor procesin e kundërt të enkriptimit për të kthyer karakteret në pozicionet e tyre origjinale. Për çdo karakter në tekstin e enkriptuar, nëse karakteri është një shkronjë, përdor çelësin për të llogaritur zhvendosjen e nevojshme për të kthyer karakterin në pozicionin e tij origjinal në ASCII dhe e shton këtë karakter të dekriptuar në tekstin e dekriptuar. Në fund, kthen tekstin e dekriptuar.
     
 Këto dy algoritme janë të ndara në dy klasa të veçanta, **Encryption** dhe **Decryption**. Klasa kryesore **Main** përdoret për të marrë hyrjet nga përdoruesi, për të thirrur metodat për e enkriptimit dhe dekriptimit, dhe për të printuar tekstin e enkriptuar dhe tekstin e dekriptuar në konsolë.
 
 2.	**Double Transposition**
-2.1	**Row Transposition**
-a.	**Algoritmi i enkriptimit:**
-    •	Fillimisht ndan plaintext-in e dhënë në rreshta sipas një çelësi të dhënë (keywordCols).
-    •	I rreshton rreshtat sipas një çelësi tjetër të dhënë (keywordRows).
-    •	Shpërndan tekstin në matricë në mënyrë të panjohur përveçse për ata që njohin rendin e rreshtave dhe kolonave.
-    •	Zgjedh karakteret sipas rendit të dhënë nga keywordRows.
-    •	Kthen tekstin e enkriptuar.
-b.	**Algoritmi i dekriptimit:** 
-    •	Fillimisht ndan tekstin e enkriptuar në rreshta sipas keywordCols.
-    •	I rreshton rreshtat sipas keywordRows.
-    •	Rendit rreshtat sipas rendit origjinal të keywordRows. 
-    •	Kthen tekstin e dekriptuar.
-2.2	**Column Transposition**
-a.	**Algoritmi i enkriptimit:**
-    •	Fillimisht, ndan plaintext-in në kolona duke u bazuar në një çelës, i cili është keywordCols.
-    •	Zgjedh karakteret e secilës kolonë në bazë të rendit alfabetik të çelësit keywordCols.
-    •	Kthen tekstin e enkriptuar.
-b.	**Algoritmi i sekriptimit:**
-    •	Fillimisht, ndan tekstin e enkriptuar në kolona sipas rendit origjinal të keywordCols.
-    •	Rendit kolonat në përputhje me rendin origjinal të keywordCols.
-    •	Kthen tekstin e dekriptuar
-2.3	**Klasa Main:**
-    •	Merr hyrjen nga përdoruesi për plaintext dhe keywordCols.
-    •	Kërkon gjatësinë e keywordRows duke llogaritur përafërsisht sa rreshta do të duhen për të ndarë plaintext-in në mënyrë të përshtatshme në matricë.
-    •	Enkripton plaintext-in duke përdorur Row Transposition dhe e paraqet në konsolë.
-    •	Tekstin e enkriptuar me RowTransposition e enkripton me Column Transposition dhe e paraqet në konsolë.
-    •	Tekstin e enkriptuar me Column Transposition e dekripton me po të njëjtin transposition dhe e paraqet në konsolë.
-    •	Tekstin e dekriptuar me Column Transposition e dekripton me Row Transposition dhe e paraqet në konsolë.
+- 2.1	**Row Transposition**
+- a.	**Algoritmi i enkriptimit:** Kjo metodë fillimisht ndan plaintext-in në rreshta sipas një çelësi të dhënë (keywordCols) dhe pastaj i rreshton rreshtat sipas një çelësi tjetër të dhënë (keywordRows). Kjo siguron që teksti të shpërndahet në mënyrë të panjohur, përveçse për ata që njohin rendin e rreshtave dhe kolonave. Pas shpërndarjes së tekstit në matricën e përshtatur, karakteret zgjidhen sipas rendit të dhënë nga keywordRows dhe bashkohen në një tekst të enkriptuar.
+- b.	**Algoritmi i dekriptimit:** Ky algoritëm bën operacionin e kundërt të algoritmit të enkriptimit. Fillimisht, karakteret e tekstit të enkriptuar ndahen në rreshta sipas rendit të dhënë nga keywordRows, pastaj rreshtat rreshtat renditen sipas rendit origjinal të keywordRows dhe karakteret i bashkohen për të krijuar tekstin e dekriptuar.
 
+- 2.2	**Column Transposition**
+- a.	**Algoritmi i enkriptimit:** Ky algoritëm fillimisht ndan plaintext-in në kolona sipas një çelësi të dhënë, i cili quhet keywordCols. Pas ndarjes së tekstit në kolona, karakteret e secilës kolonë zgjidhen dhe bashkohen në një radhë të caktuar nga keywordCols. Rezultati është teksti i enkriptuar.
+- b.	**Algoritmi i dekriptimit:** Ky algoritëm kryen operacionin e kundërt të algoritmit të enkriptimit. Fillimisht, karakteret e tekstit të enkriptuar ndahen në kolona sipas rendit origjinal të keywordCols. Pastaj, kolonat e ndara renditen në përputhje me rendin origjinal të keywordCols. Karakteret e kolonave të renditura pastaj bashkohen për të krijuar tekstin e dekriptuar.
+- 2.3	**Klasa Main:** Fillimisht merr hyrjen nga përdoruesi për plaintext dhe keywordCols. Pas kësaj, kërkon gjatësinë e keywordRows duke llogaritur përafërsisht sa rreshta do të duhen për të ndarë plaintext-in në mënyrë të përshtatshme në matricë. E enkripton plaintext-in duke përdorur Row Transposition. Tekstin e enkriptuar me RowTransposition e enkripton me Column Transposition dhe të dyja transpozicionet i paraqet në konsolë. Më pas tekstin e enkriptuar me Column Transposition e dekripton me po të njëjtin transposition. Përfundimisht, tekstin e dekriptuar me Column Transposition e dekripton me Row Transposition dhe të dyja transpozicionet i paraqet në konsolë.
 
 
