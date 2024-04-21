@@ -27,7 +27,7 @@ Këto dy algoritme janë të ndara në dy klasa të veçanta, **Encryption** dhe
 ### 2.	**Double Transposition**
 #### **Row Transposition**
 - **Algoritmi i enkriptimit:** Kjo metodë fillimisht ndan plaintext-in në rreshta sipas një çelësi të dhënë (keywordCols) dhe pastaj i rreshton rreshtat sipas një çelësi tjetër të dhënë (keywordRows). Kjo siguron që teksti të shpërndahet në mënyrë të panjohur, përveçse për ata që njohin rendin e rreshtave dhe kolonave. Pas shpërndarjes së tekstit në matricën e përshtatur, karakteret zgjidhen sipas rendit të dhënë nga keywordRows dhe bashkohen në një tekst të enkriptuar.
-- **Algoritmi i dekriptimit:** Ky algoritëm bën operacionin e kundërt të algoritmit të enkriptimit. Fillimisht, karakteret e tekstit të enkriptuar ndahen në rreshta sipas rendit të dhënë nga keywordRows, pastaj rreshtat rreshtat renditen sipas rendit origjinal të keywordRows dhe karakteret i bashkohen për të krijuar tekstin e dekriptuar.
+- **Algoritmi i dekriptimit:** Ky algoritëm bën operacionin e kundërt të algoritmit të enkriptimit. Fillimisht, karakteret e tekstit të enkriptuar ndahen në rreshta sipas rendit të dhënë nga keywordRows, pastaj rreshtat renditen sipas rendit origjinal të keywordRows dhe karakteret i bashkohen për të krijuar tekstin e dekriptuar.
 ###
 #### **Column Transposition**
 - **Algoritmi i enkriptimit:** Ky algoritëm fillimisht ndan plaintext-in në kolona sipas një çelësi të dhënë, i cili quhet keywordCols. Pas ndarjes së tekstit në kolona, karakteret e secilës kolonë zgjidhen dhe bashkohen në një radhë të caktuar nga keywordCols. Rezultati është teksti i enkriptuar.
